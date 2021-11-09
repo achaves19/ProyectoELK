@@ -1,0 +1,15 @@
+#- pipeline.id: logunicaja_ecs_pipe
+#  pipeline.workers: 1
+#  path.config: /usr/share/logstash/pipeline/logunicaja_ecs.conf
+
+#- pipeline.id: systemout_pipe
+#  pipeline.workers: 1
+#  path.config: /usr/share/logstash/pipeline/systemout.conf
+
+#- pipeline.id: outputalarmsspark_pipe
+#  pipeline.workers: 1
+#  path.config: /usr/share/logstash/pipeline/outputalarmsSpark.conf
+
+#- pipeline.id: entrada_control_M_pipe
+#  pipeline.workers: 1
+#  path.config: /usr/share/logstash/pipeline/entrada_control_m.conf

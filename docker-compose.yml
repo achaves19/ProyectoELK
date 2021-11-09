@@ -1,0 +1,61 @@
+version: '3.7'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.15.1
+    container_name: elasticsearch
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    environment:
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - discovery.type=single-node
+    volumes:
+      - ./elasticsearch/data:/usr/share/elasticsearch/data
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ports:
+      - 9200:9200
+      - 9300:9300
+
+
+
+###############################################################
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.15.1
+    container_name: logstash
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml #Archivo de configuracion de logstash
+      - ./logstash/config/pipelines.yml:/usr/share/logstash/config/pipelines.yml # Archivo de configuracion de las pipelines
+      - ./logstash/pipeline:/usr/share/logstash/pipeline # Carpetas que tendrán .conf
+      - ./logstash/patterns:/usr/share/logstash/patterns # Guardaremos los patrones
+      - ./logstash/templates:/usr/share/logstash/templates # Ruta donde guardaremos las plantillas
+      - ./logstash/logs:/usr/share/logstash/logs # Ruta para guardar los logs de muestra 
+
+
+###############################################################
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.15.1
+    container_name: kibana
+    ports:
+      - 5601:5601
+    volumes:
+      - ./kibana/config/kibana.yml:/usr/share/kibana/kibana.yml
+  
+
+
+
+
+
+###############################################################
+
+ # filebeat:
+ #   image: docker.elastic.co/beats/filebeat:7.15.1
+ #   volumes:
+ #     - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
+  #    - ./filebeat/logs:/var/log
+
+
+###############################################################

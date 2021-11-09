@@ -1,0 +1,12 @@
+{"Name": "EVENTCONSUMER_MT-Status", "Status": "ok", "DateOprtn": "2021-09-21T06:24:10+02:00"}
+{"Name": "EVENTCONSUMER_MT-Waiting Batches", "Status": "ok", "DateOprtn": "2021-08-08T05:22:55+02:00"}
+{"Name": "EVENTCONSUMER_RT-Status", "Status": "ok", "DateOprtn": "2021-09-21T07:44:40+02:00"}
+{"Name": "EVENTCONSUMER_RT-Waiting Batches", "Status": "ok", "DateOprtn": "2021-09-20T11:51:45+02:00"}
+{"Name": "ITX-EVSTMSGCONSUMER-Status", "Status": "alerting", "DateOprtn": "2021-09-21T12:33:20+02:00"}
+{"Name": "ITX-EVTSTMSGCONSUMER-Waiting Batches", "Status": "no_data", "DateOprtn": "2021-09-21T12:33:30+02:00"}
+{"Name": "ITX-MidLine-Status", "Status": "ok", "DateOprtn": "2021-09-21T12:33:31+02:00"}
+{"Name": "ITX-MidLine-WaitingBatches", "Status": "alerting", "DateOprtn": "2021-09-21T12:36:32+02:00"}
+{"Name": "TLV-EVTSTMSGCONSUMER-Status", "Status": "ok", "DateOprtn": "2021-09-21T12:34:10+02:00"}
+{"Name": "TLV-EVTSTMSGCONSUMER-Waiting Batches", "Status": "ok", "DateOprtn": "2021-09-20T21:33:30+02:00"}
+{"Name": "TLV-MidLine-Status", "Status": "ok", "DateOprtn": "2021-09-20T22:00:10+02:00"}
+{"Name": "TLV-MidLine-WaitingBatches", "Status": "ok", "DateOprtn": "2021-09-20T21:45:15+02:00"}
